@@ -4,7 +4,7 @@
   <ul class="title-area">
     <!-- Title Area -->
     <li class="name">
-      <h1><a href="#">Sticky Top Bar</a></h1>
+      <h1><a href="#">Week Recipes</a></h1>
     </li>
     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
     <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
@@ -16,34 +16,40 @@
     <!-- Right Nav Section -->
     <ul class="right">
       <li class="divider hide-for-small"></li>
-      <li><a href="#">Main Item 1</a></li>
+      <li><a href="#" data-reveal-id="myModal">Create new recipe</a></li>
+      <li><%= link_to "ro", data: {:"reveal-id" => "myModal", :"reveal-ajax" => true} %></li>
+
     </ul>
   </section></nav>
 </div>
+
+
+
+      
+      
+      
+      
 
 <p>  </p>
 
 <div class="row weekdays">
   <ul class="small-block-grid-7">
     <li>Mon</li>
-    <li>Mon</li>
-    <li>Mon</li>
-    <li>Mon</li>
-    <li>Mon</li>
-    <li>Mon</li>
-    <li>Mon</li>
+    <li>Tue</li>
+    <li>Wed</li>
+    <li>Thu</li>
+    <li>Fri</li>
+    <li>Sat</li>
+    <li>Sun</li>
   </ul>
 </div>
 
 <div class="row">
-  <h1>AllRecipes#index</h1>
-  <%=  %>
-  <h1>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nulla vitae elit libero, a pharetra augue.
-
-Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum.
-
-Sed posuere consectetur est at lobortis. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.
-
-Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis.</h1>
+  <h1>All recipes</h1>
+  <div class="small-2 large-4 columns">TEST1
+    <%= @recipes.each do |x| %>
+      <%= x %>
+    <% end %>
+  </div>
 </div>
 
