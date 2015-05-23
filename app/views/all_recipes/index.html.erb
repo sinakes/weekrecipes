@@ -30,23 +30,24 @@
       
       
 
-<p>  </p>
 
-<div class="row weekdays">
-  <ul class="small-block-grid-7">
-    <li>Mon</li>
-    <li>Tue</li>
-    <li>Wed</li>
-    <li>Thu</li>
-    <li>Fri</li>
-    <li>Sat</li>
-    <li>Sun</li>
-  </ul>
+<div id="week">
+  <div class="">
+    <ul class="small-block-grid-7">
+      <li class="weekdays">Mon</li>
+      <li class="weekdays">Tue</li>
+      <li class="weekdays">Wed</li>
+      <li class="weekdays">Thu</li>
+      <li class="weekdays">Fri</li>
+      <li class="weekdays">Sat</li>
+      <li class="weekdays">Sun</li>
+    </ul>
+  </div>
 </div>
 
 <div class="row">
   <h1>All recipes</h1>
-  <div class="small-2 large-4 columns">TEST1
+  <div class="small-2 large-4 columns recipe">TEST1
     <%= @recipes.each do |x| %>
       <%= x %>
     <% end %>
