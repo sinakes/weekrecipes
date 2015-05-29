@@ -9,6 +9,8 @@
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= javascript_include_tag "application" 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag "application" %>
+
     <%= csrf_meta_tags %>
   </head>
 
@@ -17,19 +19,6 @@
     <%= yield %>
     
     
-  <!-- START inlagd från foundation http://foundation.zurb.com/docs/javascript.html   -->
-    <script src="/js/vendor/jquery.js"></script>
-    <script src="/js/vendor/fastclick.js"></script>
-    <script src="/js/foundation.min.js"></script>
-    
-  
-    <script>
-      $(document).foundation();
-    </script>
-    
-    
-  <!-- END inlagd från foundation http://foundation.zurb.com/docs/javascript.html   -->
-  
   </body>
 </html>
 

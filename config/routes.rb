@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   root 'all_recipes#index'
   get 'all_recipes/index'
-  get 'new' => 'all_recipes#new'
+  get 'all_recipes/new' => 'all_recipes#new'
+  post '/recipes' => 'all_recipes#create'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

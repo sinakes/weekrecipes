@@ -17,13 +17,33 @@
     <ul class="right">
       <li class="divider hide-for-small"></li>
       <li><a href="#" data-reveal-id="myModal">Create new recipe</a></li>
-      <li><%= link_to "ro", data: {:"reveal-id" => "myModal", :"reveal-ajax" => true} %></li>
+      
 
     </ul>
   </section></nav>
 </div>
 
 
+<div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+  <h2 id="modalTitle">Add new recipe</h2>
+    <% @recipe = Recipe.new %>
+    <%= form_for(@recipe) do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :how %>
+      <%= f.text_area :how %>
+
+      <%= f.label :ingredients %>
+      <%= f.text_field :ingredients %>
+      
+      <%= f.label :nutrients %>
+      <%= f.text_field :nutrients %>
+
+      <%= f.submit "Create", class: "btn btn-primary" %>
+    <% end %>
+  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
 
       
       
@@ -46,11 +66,15 @@
 </div>
 
 <div class="row">
-  <h1>All recipes</h1>
-  <div class="small-2 large-4 columns recipe">TEST1
-    <%= @recipes.each do |x| %>
-      <%= x %>
+  <div class="small-12 large-12 columns"><h2>All recipes</h2></div>
+    <% @recipes.each do |x| %>
+      <div class="small-2 large-4 columns">
+        <div draggable="true" class="panel recipe">
+          <h2><small><%= x.name %></small></h2>
+          <p><%= x.ingredients %></p>
+          <p><%= x.how %></p>
+          <p><%= x.nutrients %></p>
+        </div>
+      </div>
     <% end %>
-  </div>
 </div>
-

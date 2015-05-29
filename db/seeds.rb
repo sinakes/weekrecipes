@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+  Recipe.create([
+                {name: "Gröt", ingredients:"mandelmjöl, vaniljpulver, grädde, fiberhusk", nutrients: "protein:20g, fett: 30g", how: "gör si och så"}, 
+                {name: "Gröt", ingredients:"mandelmjöl, vaniljpulver, grädde, fiberhusk", nutrients: "protein:20g, fett: 30g", how: "gör si och så"},
+                {name: "Gröt", ingredients:"mandelmjöl, vaniljpulver, grädde, fiberhusk", nutrients: "protein:20g, fett: 30g", how: "gör si och så"},
+                {name: "Gröt", ingredients:"mandelmjöl, vaniljpulver, grädde, fiberhusk", nutrients: "protein:20g, fett: 30g", how: "gör si och så"},
+                {name: "Gröt", ingredients:"mandelmjöl, vaniljpulver, grädde, fiberhusk", nutrients: "protein:20g, fett: 30g", how: "gör si och så"}
+                ])
