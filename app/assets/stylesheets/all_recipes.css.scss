@@ -20,6 +20,11 @@
 }
 
 .dragenter {
-    border: 1px dashed blue;
+  background-color: rgb(255, 245, 223);
+  border: 1px solid rgb(252, 213, 128);
+}
 
+
+.x {
+    float: left;
 }
